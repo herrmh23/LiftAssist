@@ -8,7 +8,7 @@ struct NewWorkoutView: View {
         
         VStack(alignment: .leading, spacing: 10) {
             
-            Text("Create a New Template")
+            Text("Log Today's Workout")
                 .font(.title2)
                 .fontWeight(.bold)
                 
