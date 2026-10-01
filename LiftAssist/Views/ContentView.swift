@@ -29,6 +29,13 @@ struct ContentView: View {
             .tabItem {
                 Image(systemName: "chart.line.uptrend.xyaxis")
             }
+            
+            NavigationStack {
+                SettingsView()
+            }
+            .tabItem {
+                Image(systemName: "gearshape.fill")
+            }
         }
     }
 }

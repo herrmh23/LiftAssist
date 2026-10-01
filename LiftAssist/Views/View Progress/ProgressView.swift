@@ -7,7 +7,11 @@ struct ProgressView: View {
     var body: some View {
             
         ScrollView {
-            VStack {
+            VStack(alignment: .leading, spacing: 10) {
+                
+                Text("View Progress")
+                    .font(.title2)
+                    .fontWeight(.bold)
                 
                 ForEach(exercises) {
                     exercise in
@@ -33,67 +37,7 @@ struct ProgressView: View {
                     
                     
                 } // end VStack view
-                
-                
-                
-                
-                
-                
-                
-//                NavigationLink(destination: ProgressDataView()) {
-//                    
-//                    HomeButton(title: "Squat", subtitle: .none, icon: "dumbbell")
-//                }
-//                
-//                NavigationLink(destination: PlaceHolderView()) {
-//                    
-//                    HomeButton(title: "Deadlift", subtitle: .none, icon: "dumbbell")
-//                }
-//                
-//                NavigationLink(destination: PlaceHolderView()) {
-//                    
-//                    HomeButton(title: "Leg Extention", subtitle: .none, icon: "dumbbell")
-//                }
-//                
-//                NavigationLink(destination: PlaceHolderView()) {
-//                    
-//                    HomeButton(title: "Leg Curl", subtitle: .none, icon: "dumbbell")
-//                }
-//                
-//                NavigationLink(destination: PlaceHolderView()) {
-//                    
-//                    HomeButton(title: "Bench Press", subtitle: .none, icon: "dumbbell")
-//                }
-//                
-//                NavigationLink(destination: PlaceHolderView()) {
-//                    
-//                    HomeButton(title: "Barbell Curl", subtitle: .none, icon: "dumbbell")
-//                }
-//                
-//                NavigationLink(destination: PlaceHolderView()) {
-//                    
-//                    HomeButton(title: "Dumbbell Curl", subtitle: .none, icon: "dumbbell")
-//                }
-//                
-//                NavigationLink(destination: PlaceHolderView()) {
-//                    
-//                    HomeButton(title: "Shoulder Press", subtitle: .none, icon: "dumbbell")
-//                }
-//                
-//                NavigationLink(destination: PlaceHolderView()) {
-//                    
-//                    HomeButton(title: "Pec Fly", subtitle: .none, icon: "dumbbell")
-//                }
-//                
-//                NavigationLink(destination: PlaceHolderView()) {
-//                    
-//                    HomeButton(title: "Stair Master", subtitle: .none, icon: "figure.run")
-//                }
-//                
-//                NavigationLink(destination: PlaceHolderView()) {
-//                    
-//                    HomeButton(title: "Treadmill", subtitle: .none, icon: "figure.run")
-//                }
+                    .padding()
                 
                 Spacer()
                 
