@@ -18,7 +18,7 @@ struct ProgressView: View {
                     
                     NavigationLink(destination: ProgressDataView(exercise: exercise)
                     ) {
-                        HomeButton(title: exercise.name, subtitle: .none, icon: exercise.type == .lift ? "dumbbell" : "figure.run")
+                        HomeButton(title: exercise.name, subtitle: .none, icon:  "dumbbell")
                     }
                 }
                   

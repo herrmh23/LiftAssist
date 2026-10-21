@@ -37,7 +37,6 @@ struct HomeButton: View {
         .foregroundStyle(.white)
         .padding()
         .frame(maxWidth: .infinity)
-        //.background(Color(red: 23.0 / 255, green: 23.0 / 255, blue: 23.0 / 255))
         .background(Color(.blue))
         .clipShape( RoundedRectangle(cornerRadius: 16))
     }

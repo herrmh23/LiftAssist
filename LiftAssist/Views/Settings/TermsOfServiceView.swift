@@ -90,6 +90,22 @@ struct TermsOfServiceView: View {
                     .disabled(!isAccepted)
                 }
                 .buttonSizing(.flexible)
+                
+                //Secret button to clear all of my test case workouts
+                Button {
+                    WorkoutStore().clearAllWorkouts()
+                } label: {
+                    Text("Clear all workouts (for demo use only)")
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.borderedProminent)
+                
+                //Button to load demo workouts (for demo use only)
+                Button("Load Demo Workouts") {
+                    SampleWorkoutData.replaceWithDemoWorkouts()
+                }
+                .buttonStyle(.borderedProminent)
+                
             }
             .padding(.horizontal)
             .padding(.bottom, 24)
