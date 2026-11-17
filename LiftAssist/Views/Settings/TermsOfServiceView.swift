@@ -7,6 +7,8 @@ struct TermsOfServiceView: View {
     @State private var isAccepted = false
     @Environment(\.dismiss) private var dismiss
     
+
+    
     var body: some View {
         VStack(spacing: 0) {
             // MARK: - Header
@@ -91,20 +93,21 @@ struct TermsOfServiceView: View {
                 }
                 .buttonSizing(.flexible)
                 
-                //Secret button to clear all of my test case workouts
-                Button {
-                    WorkoutStore().clearAllWorkouts()
-                } label: {
-                    Text("Clear all workouts (for demo use only)")
-                        .frame(maxWidth: .infinity)
-                }
-                .buttonStyle(.borderedProminent)
+//                //Secret button to clear all of my test case workouts
+//                Button {
+//                    WorkoutStore().clearAllWorkouts()
+//                } label: {
+//                    Text("Clear all workouts (for demo use only)")
+//                        .frame(maxWidth: .infinity)
+//                }
+//                .buttonStyle(.borderedProminent)
+//                
+//                //Button to load demo workouts (for demo use only)
+//                Button("Load Demo Workouts") {
+//                    SampleWorkoutData.replaceWithDemoWorkouts()
+//                }
+//                .buttonStyle(.borderedProminent)
                 
-                //Button to load demo workouts (for demo use only)
-                Button("Load Demo Workouts") {
-                    SampleWorkoutData.replaceWithDemoWorkouts()
-                }
-                .buttonStyle(.borderedProminent)
                 
             }
             .padding(.horizontal)

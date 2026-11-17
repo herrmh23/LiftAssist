@@ -50,6 +50,13 @@ class TemplateStore {
         }
     }
     
+//    //MARK: - Clear templates
+//    func clearAllTemplates() {
+//        var templates = loadTemplates()
+//        templates.removeAll()
+//        saveTemplate(<#Workout#>)
+//    }
+    
     
     
     

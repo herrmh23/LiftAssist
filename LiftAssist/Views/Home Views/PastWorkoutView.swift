@@ -7,7 +7,7 @@ struct PastWorkoutView: View {
     let pastDayName: String
     let selectedDate: Date
 
-    @State private var showDeleteWarning = false
+    @State private var workoutToDelete: Workout?
 
     var pastWorkouts: [Workout] {
         workoutStore.workouts.filter { workout in
@@ -40,6 +40,16 @@ struct PastWorkoutView: View {
             } //Vstack close
             
         } //scrollview close
+        .alert(item: $workoutToDelete) { workout in
+            Alert(
+                title: Text("Delete \(workout.name)?"),
+                message: Text("Deleting a workout cannot be undone"),
+                primaryButton: .destructive(Text("Delete")) {
+                    workoutStore.deleteWorkout(workout)
+                },
+                secondaryButton: .cancel(Text("No"))
+            )
+        }
         
     } //body close
     
@@ -70,10 +80,7 @@ struct PastWorkoutView: View {
                 }
                 
                 Button {
-                    
-                    showDeleteWarning = true
-
-                    
+                    workoutToDelete = workout
                 } label: {
                     Image(systemName: "trash")
                         .font(.headline)
@@ -81,16 +88,6 @@ struct PastWorkoutView: View {
                 }
                 .foregroundStyle(.red)
                 .padding()
-                .alert("Delete \(workout.name)?", isPresented: $showDeleteWarning) {
-                    Button("No", role: .cancel) {
-                        showDeleteWarning = false
-                    }
-                    Button("Delete", role: .destructive){
-                        workoutStore.deleteWorkout(workout)
-                    }
-                } message: {
-                    Text("Deleting a workout cannot be undone")
-                }
             }
         }
         .padding()
